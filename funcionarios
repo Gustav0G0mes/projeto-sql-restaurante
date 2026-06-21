@@ -1,0 +1,14 @@
+USE funcionarios;
+CREATE TABLE funcionarios (
+
+id_funcionario INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(255) NOT NULL,
+cpf VARCHAR(14) UNIQUE NOT NULL,
+data_nascimento DATE,
+endereco VARCHAR(255),
+telefone VARCHAR(15),
+email VARCHAR(100),
+cargo VARCHAR(100),
+salario DECIMAL(10,2),
+data_admissao DATE
+);
