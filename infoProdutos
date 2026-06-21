@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS info_produtos;
+USE info_produtos;
+
+CREATE TABLE info_produtos (
+id_info INT PRIMARY KEY AUTO_INCREMENT,
+id_produto INT,
+ingredientes TEXT,
+fornecedor VARCHAR(255),
+    
+CONSTRAINT fk_produto
+FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+);
